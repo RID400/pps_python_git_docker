@@ -5,3 +5,9 @@ Esto es una increible, remenda, fantastica, alucinante, estrepidamte, escalofria
 
 Tienes fortuna??
 Descubrelo en LA BAYETA DE LA FORTUNA
+
+
+SOLUCION DE DEPENDENCIAS
+
+Para solucionar problemas con dependencias de Python será necesario ejecutar el comando:
+pip install -r requirements.txt
