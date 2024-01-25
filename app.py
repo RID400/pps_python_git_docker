@@ -13,4 +13,5 @@ def obtener_frases(n_frases):
     return jsonify({"frases_auspiciosas": frases})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Modificar la línea para que Flask escuche en todas las interfaces
+    app.run(host='0.0.0.0', port=5000, debug=True)
