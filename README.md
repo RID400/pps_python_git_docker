@@ -12,8 +12,9 @@ Es necesario tener instalado docker, más información en https://docs.docker.co
 
 ## GUIA DE USO
 1. Desplazarse a carpeta de proyecto.
-2. Construir la imagen con Dockerfile: docker build -t bayeta .
-3. Construir docker en base a la imagen: docker run -d -p 5000:5000 --name bayeta bayeta
+2. Inicia un contenedor de mongodb con el comando: docker run -d -p 27017:27017 --name mongo mongo:4.4.18
+3. Construir la imagen con Dockerfile: docker build -t bayeta .
+4. Construir docker en base a la imagen: docker run -d -p 5000:5000 --name bayeta bayeta
 
 ## Contribución:
 Robert Mitache (Strimer de éxito, gran amigo mejor persona) 0 spam pero https://www.twitch.tv/sxprimo
