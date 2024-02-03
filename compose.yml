@@ -7,6 +7,8 @@ services:
       - "27017:27017"
     networks:
       - bayeta-network
+    volumes:
+      - mongo:/data/db
 
   bayeta:
     build:
@@ -24,3 +26,6 @@ services:
 networks:
   bayeta-network:
     driver: bridge
+
+volumes:
+  mongo:
