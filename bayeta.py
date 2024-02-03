@@ -1,4 +1,3 @@
-# bayeta.py
 import subprocess
 import json
 import random
@@ -19,6 +18,10 @@ def obtener_frases_desde_mongo(n_frases: int = 1) -> List[str]:
         print(f"Error al obtener frases desde MongoDB: {proceso.stderr}")
         return []
 
+def insertar_nueva_frase_en_mongo(nueva_frase: str):
+    # Llamar al script de MongoDB para insertar la nueva frase
+    subprocess.run(['python', 'mongo.py', 'insertar', nueva_frase])
+
 def frotar(n_frases: int = 1) -> List[str]:
     # Intentar obtener frases desde MongoDB
     frases_auspiciosas = obtener_frases_desde_mongo(n_frases)
@@ -30,7 +33,11 @@ def frotar(n_frases: int = 1) -> List[str]:
     return frases_elegidas
 
 if __name__ == "__main__":
-    # Uso de la función
+    # Uso de la función de inserción
+    nueva_frase = "Nueva frase auspiciosa"
+    insertar_nueva_frase_en_mongo(nueva_frase)
+
+    # Uso de la función para obtener frases
     frases_obtenidas = frotar(3)
 
     # Imprimir las frases obtenidas

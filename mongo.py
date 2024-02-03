@@ -31,5 +31,21 @@ def inicializar():
     # Cerrar cliente
     cliente_mongo.close()
 
+def insertar_nueva_frase(nueva_frase):
+    # Conexión con el motor de Mongo
+    cliente_mongo = MongoClient('mongodb://mongo:27017/')
+
+    # Conexión con la BD (la crea si no existe)
+    bd = cliente_mongo['bayeta']
+
+    # Conexión con la tabla (llamada colección en Mongo)
+    frases_auspiciosas = bd['frases_auspiciosas']
+
+    # Inserción de la nueva frase
+    frases_auspiciosas.insert_one({'frase': nueva_frase})
+
+    # Cerrar cliente
+    cliente_mongo.close()
+
 if __name__ == "__main__":
     inicializar()
