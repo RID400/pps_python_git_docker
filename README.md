@@ -12,7 +12,7 @@ Es necesario tener instalado docker y docker-compose, más información en **htt
 
 ## GUIA DE USO
 1. Desplazarse a carpeta de proyecto.
-2. Ejecutar el ```compose.yml```
+2. Ejecutar compose.yml ```docker-compose up -d```
 3. Disfrutar de la aplicación :D
 
 Entrar a la direccion local localhost:5000
